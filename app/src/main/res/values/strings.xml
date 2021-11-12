@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">chicko</string>
+    <string name="title_description">چیکار می‌خوای بکنی؟</string>
+
     <string name="title_provider1">لوله کشی آقا بزرگ</string>
     <string name="title_provider2">نانوانی شاطر عباس</string>
     <string name="title_provider3">میوه‌فروشی سید</string>
     <string name="title_provider4">تعمیرات لپ‌تاپ منچستر</string>
     <string name="title_provider5">نظافت ساختمان با دانا</string>
+
+    <!--    bottom menu strings-->
+    <string name="bt_menu_home">خانه</string>
+    <string name="bt_menu_categories">دسته‌بندی‌ها</string>
+    <string name="bt_menu_providers">سرویس‌دهندگان</string>
+    <string name="bt_menu_account">حساب کاربری</string>
 </resources>
