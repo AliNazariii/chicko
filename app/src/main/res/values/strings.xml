@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">chicko</string>
+    <string name="title_provider1">لوله کشی آقا بزرگ</string>
+    <string name="title_provider2">نانوانی شاطر عباس</string>
+    <string name="title_provider3">میوه‌فروشی سید</string>
+    <string name="title_provider4">تعمیرات لپ‌تاپ منچستر</string>
+    <string name="title_provider5">نظافت ساختمان با دانا</string>
 </resources>
