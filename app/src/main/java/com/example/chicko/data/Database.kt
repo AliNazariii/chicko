@@ -21,6 +21,11 @@ class Database {
 
         val COMMENTS = listOf<Comment>(
             Comment("havig",1, "test"),
+            Comment("havig",2, "test"),
+            Comment("havig",3, "test"),
+            Comment("havig",4, "test"),
+            Comment("havig",5, "test"),
+            Comment("havig",6, "test"),
         )
 
     }
