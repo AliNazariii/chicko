@@ -6,12 +6,12 @@ import com.example.chicko.model.User
 
 class Database {
     companion object {
-        val USERS = listOf<User>(
+        val USERS = mutableListOf<User>(
             User(firstName = "Muhammad", lastName = "Azhdari", userName = "havig", "pass"),
             User(firstName = "Ali", lastName = "Nazari", userName = "shalgham", "pass"),
             User(firstName = "Yashar", lastName = "Jahanshahlou", userName = "piaz", "pass"),
         )
-        val Services = listOf<Service>(
+        val Services = mutableListOf<Service>(
             Service(1, "لوله کشی آقا بزرگ", address = "Tehran", phone = "123456"),
             Service(2, "میوه فروشی سید", address = "Tehran", phone = "123455"),
             Service(3, "تعمیرات لپ تاپ منچستر", address = "Tehran", phone = "123454"),
@@ -19,7 +19,7 @@ class Database {
             Service(5, "نانوایی شاطر عباس", address = "Tehran", phone = "123452"),
         )
 
-        val COMMENTS = listOf<Comment>(
+        val COMMENTS = mutableListOf<Comment>(
             Comment("havig",1, "test"),
             Comment("havig",2, "test"),
             Comment("havig",3, "test"),

@@ -1,6 +1,7 @@
 package com.example.chicko.data
 
 import com.example.chicko.R
+import com.example.chicko.model.Comment
 import com.example.chicko.model.ProviderItem
 import com.example.chicko.model.Service
 
@@ -8,6 +9,18 @@ class ProviderItemsDataSource {
 
     fun getAllServices(): List<Service> {
         return Database.Services
+    }
+
+    fun getServiceByName(name: String): List<Service> {
+        return Database.Services.filter { service -> service.name == name }
+    }
+
+    fun addComment(ownerName: String, serviceID: Int, content: String) {
+        Database.COMMENTS.add(Comment(ownerName, serviceID, content))
+    }
+
+    fun getCommentsByServiceID(serviceID: Int): List<Comment> {
+        return Database.COMMENTS.filter { comment -> comment.serviceID == serviceID }
     }
 
     fun loadProviderItems(): List<ProviderItem> {
