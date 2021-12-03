@@ -2,8 +2,13 @@ package com.example.chicko.data
 
 import com.example.chicko.R
 import com.example.chicko.model.ProviderItem
+import com.example.chicko.model.Service
 
 class ProviderItemsDataSource {
+
+    fun getAllServices(): List<Service> {
+        return Database.Services
+    }
 
     fun loadProviderItems(): List<ProviderItem> {
         return listOf<ProviderItem>(
