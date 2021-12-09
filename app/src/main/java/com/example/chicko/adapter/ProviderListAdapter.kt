@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chicko.R
 import com.example.chicko.model.ProviderItem
 
-class ProviderItemAdapter(
+class ProviderListAdapter(
     private val context: Context,
     private val dataset: List<ProviderItem>
-): RecyclerView.Adapter<ProviderItemAdapter.ProviderItemViewHolder>() {
+): RecyclerView.Adapter<ProviderListAdapter.ProviderItemViewHolder>() {
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -30,7 +30,7 @@ class ProviderItemAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProviderItemViewHolder {
         // create a new view
         val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.provider_items_list, parent, false)
+            .inflate(R.layout.provider_item, parent, false)
 
         return ProviderItemViewHolder(adapterLayout)
     }

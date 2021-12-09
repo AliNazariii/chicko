@@ -13,4 +13,6 @@
     <string name="bt_menu_categories">دسته‌بندی‌ها</string>
     <string name="bt_menu_providers">سرویس‌دهندگان</string>
     <string name="bt_menu_account">حساب کاربری</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
