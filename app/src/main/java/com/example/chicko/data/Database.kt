@@ -1,9 +1,6 @@
 package com.example.chicko.data
 
-import com.example.chicko.model.Category
-import com.example.chicko.model.Comment
-import com.example.chicko.model.Service
-import com.example.chicko.model.User
+import com.example.chicko.model.*
 
 class Database {
     companion object {
@@ -19,12 +16,18 @@ class Database {
         )
 
         val Services = mutableListOf<Service>(
-            Service(1,1, "لوله کشی آقا بزرگ", address = "Tehran", phone = "123456"),
-            Service(2,3, "میوه فروشی سید", address = "Tehran", phone = "123455"),
-            Service(3,1, "تعمیرات لپ تاپ منچستر", address = "Tehran", phone = "123454"),
-            Service(4,1, "نظافت ساختمان با دانا", address = "Tehran", phone = "123453"),
-            Service(5,3, "نانوایی شاطر عباس", address = "Tehran", phone = "123452"),
-            Service(6,2, "کافه خل وچل‌ها", address = "Tehran", phone = "123452"),
+            Service(1,1, "لوله کشی آقا بزرگ", address = "Tehran", phone = "123456", 1.0),
+            Service(2,3, "میوه فروشی سید", address = "Tehran", phone = "123455", 0.0),
+            Service(3,1, "تعمیرات لپ تاپ منچستر", address = "Tehran", phone = "123454", 0.0),
+            Service(4,1, "نظافت ساختمان با دانا", address = "Tehran", phone = "123453", 0.0),
+            Service(5,3, "نانوایی شاطر عباس", address = "Tehran", phone = "123452", 0.0),
+            Service(6,2, "کافه خل وچل‌ها", address = "Tehran", phone = "123452", 0.0),
+        )
+
+        val Scores = mutableListOf<Score>(
+            Score("havig", 1, 2),
+            Score("shalgham", 2, 4),
+            Score("piaz", 3, 4),
         )
 
         val COMMENTS = mutableListOf<Comment>(
@@ -35,6 +38,5 @@ class Database {
             Comment("havig",5, "test"),
             Comment("havig",6, "test"),
         )
-
     }
 }

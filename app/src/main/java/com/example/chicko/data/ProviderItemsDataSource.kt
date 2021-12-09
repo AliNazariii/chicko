@@ -1,10 +1,8 @@
 package com.example.chicko.data
 
+import android.provider.ContactsContract
 import com.example.chicko.R
-import com.example.chicko.model.Category
-import com.example.chicko.model.Comment
-import com.example.chicko.model.ProviderItem
-import com.example.chicko.model.Service
+import com.example.chicko.model.*
 
 class ProviderItemsDataSource {
 
@@ -30,6 +28,11 @@ class ProviderItemsDataSource {
 
     fun getAllCategories(): List<Category> {
         return Database.CATEGORIES
+    }
+
+    fun addScore(value: Int, userName: String, serviceID: Int) {
+        // apply score to the service scores
+        Database.Scores.add(Score(userName, serviceID, value))
     }
 
     fun loadProviderItems(): List<ProviderItem> {
