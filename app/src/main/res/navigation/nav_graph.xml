@@ -14,5 +14,17 @@
         android:id="@+id/providerListFragment"
         android:name="com.example.chicko.ProviderListFragment"
         android:label="fragment_provider_list"
-        tools:layout="@layout/fragment_provider_list" />
+        tools:layout="@layout/fragment_provider_list" >
+        <action
+            android:id="@+id/action_providerListFragment_to_serviceFragment2"
+            app:destination="@id/serviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.example.chicko.ServiceFragment"
+        android:label="ServiceFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -42,6 +42,12 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     true
                 }
+                R.id.account_menu -> {
+                    val fragment = ServiceFragment()
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
+                        .commit()
+                    true
+                }
             }
             false
         }
