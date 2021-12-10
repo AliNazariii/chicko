@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chicko.R
-import com.example.chicko.ServiceActivity
+import com.example.chicko.activities.ServiceActivity
 import com.example.chicko.data.ProviderData
 
 

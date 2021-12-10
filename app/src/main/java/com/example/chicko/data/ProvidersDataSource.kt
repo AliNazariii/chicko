@@ -73,16 +73,20 @@ class ProvidersDataSource {
         fun getTotalCommentCount(serviceID: Int): Int {
             return Database.Comments.filter { it.serviceID == serviceID }.size
         }
-    }
 
+        fun loadCategoryProviderItems(categoryId: Int): List<ProviderData> {
+            return loadProviderItems().filter { it.categoryId == categoryId }
+        }
 
-    fun loadProviderItems(): List<ProviderData> {
-        return Database.Services.map { ProviderData(it.ID, it.name, it.banner) }
+        fun loadProviderItems(): List<ProviderData> {
+            return Database.Services.map { ProviderData(it.ID, it.name, it.categoryID, it.banner) }
+        }
     }
 }
 
 data class ProviderData(
     val id: Int,
     val name: String,
+    val categoryId: Int,
     @DrawableRes val BannerRid: Int
 )

@@ -35,7 +35,7 @@ class ProvidersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.providersRecyclerView
-        val dataSet = ProvidersDataSource().loadProviderItems()
+        val dataSet = ProvidersDataSource.loadProviderItems()
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = ProvidersAdapter(view.context, dataSet)
     }

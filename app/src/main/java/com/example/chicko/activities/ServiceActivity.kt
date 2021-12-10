@@ -1,10 +1,11 @@
-package com.example.chicko
+package com.example.chicko.activities
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.chicko.R
 import com.example.chicko.data.ProvidersDataSource
 import com.example.chicko.databinding.ActivityServiceBinding
 import com.example.chicko.utils.withPersianDigits

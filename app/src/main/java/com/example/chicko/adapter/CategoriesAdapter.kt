@@ -1,11 +1,13 @@
 package com.example.chicko.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chicko.activities.CategoryProvidersActivity
 import com.example.chicko.R
 import com.example.chicko.data.CategoryData
 
@@ -42,12 +44,13 @@ class CategoriesAdapter(
         holder.label.text = item.label
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
-//        holder.view.setOnClickListener {
-//            // Create an action from WordList to DetailList
-//            // using the required arguments
-//            val intent = Intent(context, ServiceActivity::class.java)
-//            context.startActivity(intent)
-//        }
+        holder.view.setOnClickListener {
+            // Create an action from WordList to DetailList
+            // using the required arguments
+            val intent = Intent(context, CategoryProvidersActivity::class.java)
+            intent.putExtra(CategoryProvidersActivity.CATEGORY_ID, item.id)
+            context.startActivity(intent)
+        }
     }
 
     /**
