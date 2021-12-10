@@ -1,5 +1,6 @@
 package com.example.chicko.data
 
+import com.example.chicko.R
 import com.example.chicko.model.*
 
 class Database {
@@ -24,12 +25,12 @@ class Database {
         )
 
         val Services = mutableListOf<Service>(
-            Service(1, 1, "لوله کشی آقا بزرگ", address = "Tehran", phone = "123456", 1.0),
-            Service(2, 3, "میوه فروشی سید", address = "Tehran", phone = "123455", 0.0),
-            Service(3, 1, "تعمیرات لپ تاپ منچستر", address = "Tehran", phone = "123454", 0.0),
-            Service(4, 1, "نظافت ساختمان با دانا", address = "Tehran", phone = "123453", 0.0),
-            Service(5, 3, "نانوایی شاطر عباس", address = "Tehran", phone = "123452", 0.0),
-            Service(6, 2, "کافه خل وچل‌ها", address = "Tehran", phone = "123452", 0.0),
+            Service(1, 1, "لوله کشی آقا بزرگ", address = "Tehran", phone = "123456", 1.0, R.drawable.banner_provider1),
+            Service(2, 3, "میوه فروشی سید", address = "Tehran", phone = "123455", 0.0, R.drawable.banner_provider2),
+            Service(3, 1, "تعمیرات لپ تاپ منچستر", address = "Tehran", phone = "123454", 0.0, R.drawable.banner_provider3),
+            Service(4, 1, "نظافت ساختمان با دانا", address = "Tehran", phone = "123453", 0.0, R.drawable.banner_provider4),
+            Service(5, 3, "نانوایی شاطر عباس", address = "Tehran", phone = "123452", 0.0, R.drawable.banner_provider5),
+            Service(6, 2, "کافه خل وچل‌ها", address = "Tehran", phone = "123452", 0.0, R.drawable.banner_provider1),
         )
 
         val Scores = mutableListOf<Score>(

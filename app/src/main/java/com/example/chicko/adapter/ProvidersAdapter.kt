@@ -43,7 +43,7 @@ class ProvidersAdapter(
      */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        holder.textView.text = context.resources.getString(item.titleRId)
+        holder.textView.text = item.name
         holder.imageView.setImageResource(item.BannerRid)
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
@@ -51,6 +51,7 @@ class ProvidersAdapter(
             // Create an action from WordList to DetailList
             // using the required arguments
             val intent = Intent(context, ServiceActivity::class.java)
+            intent.putExtra(ServiceActivity.SERVICE_ID, item.id)
             context.startActivity(intent)
         }
     }
