@@ -8,7 +8,21 @@ import com.example.chicko.databinding.ActivityServiceBinding
 import com.example.chicko.model.Service
 import android.content.Intent
 import android.net.Uri
+import android.widget.ImageView
 
+fun fillStar(star: ImageView) {
+    star.setImageResource(R.drawable.ic_baseline_star_pink_24)
+}
+
+fun fillAllStars(stars: List<ImageView>, serviceId: Int, username: String) {
+    stars.forEach { imageView -> imageView.setImageResource(R.drawable.ic_baseline_star_border_24) }
+    stars.forEachIndexed { index, imageView ->
+            if (index <= ProvidersDataSource.getMyScoreToService(
+                    serviceId, username
+                ) - 1
+            ) fillStar(imageView)
+        }
+}
 
 class ServiceActivity : AppCompatActivity() {
     private lateinit var binding: ActivityServiceBinding
@@ -19,6 +33,8 @@ class ServiceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val username = "shalgham"
 
         binding = ActivityServiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,5 +68,17 @@ class ServiceActivity : AppCompatActivity() {
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
         }
+        val stars = listOf<ImageView>(
+            binding.star1,
+            binding.star2,
+            binding.star3,
+            binding.star4,
+            binding.star5
+        )
+        fillAllStars(stars, service.ID, username)
+        stars.forEachIndexed { index, imageView ->  imageView.setOnClickListener{
+            ProvidersDataSource.addOrEditScore(index + 1, username, service.ID)
+            fillAllStars(stars,service.ID, username)
+        }}
     }
 }

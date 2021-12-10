@@ -36,6 +36,7 @@ class Database {
         val Scores = mutableListOf<Score>(
             Score("havig", 1, 2),
             Score("shalgham", 2, 4),
+            Score("shalgham", 1, 3),
             Score("piaz", 3, 4),
         )
 
