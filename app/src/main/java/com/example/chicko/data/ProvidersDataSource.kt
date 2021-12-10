@@ -1,10 +1,14 @@
 package com.example.chicko.data
 
-import android.provider.ContactsContract
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import com.example.chicko.R
-import com.example.chicko.model.*
+import com.example.chicko.model.Category
+import com.example.chicko.model.Comment
+import com.example.chicko.model.Score
+import com.example.chicko.model.Service
 
-class ProviderItemsDataSource {
+class ProvidersDataSource {
 
     fun getAllServices(): List<Service> {
         return Database.Services
@@ -35,13 +39,18 @@ class ProviderItemsDataSource {
         Database.Scores.add(Score(userName, serviceID, value))
     }
 
-    fun loadProviderItems(): List<ProviderItem> {
-        return listOf<ProviderItem>(
-            ProviderItem(R.string.title_provider1, R.drawable.banner_provider1),
-            ProviderItem(R.string.title_provider2, R.drawable.banner_provider2),
-            ProviderItem(R.string.title_provider3, R.drawable.banner_provider3),
-            ProviderItem(R.string.title_provider4, R.drawable.banner_provider4),
-            ProviderItem(R.string.title_provider5, R.drawable.banner_provider5),
+    fun loadProviderItems(): List<ProviderData> {
+        return listOf<ProviderData>(
+            ProviderData(R.string.title_provider1, R.drawable.banner_provider1),
+            ProviderData(R.string.title_provider2, R.drawable.banner_provider2),
+            ProviderData(R.string.title_provider3, R.drawable.banner_provider3),
+            ProviderData(R.string.title_provider4, R.drawable.banner_provider4),
+            ProviderData(R.string.title_provider5, R.drawable.banner_provider5),
         )
     }
 }
+
+data class ProviderData(
+    @StringRes val titleRId: Int,
+    @DrawableRes val BannerRid: Int
+)

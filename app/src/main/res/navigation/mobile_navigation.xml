@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.chicko.ui.home.HomeFragment"
+        android:name="com.example.chicko.ui.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_categories"
-        android:name="com.example.chicko.ui.categories.CategoriesFragment"
+        android:name="com.example.chicko.ui.CategoriesFragment"
         android:label="@string/title_categories"
         tools:layout="@layout/fragment_categories" />
 
     <fragment
         android:id="@+id/navigation_providers"
-        android:name="com.example.chicko.ui.providers.ProvidersFragment"
+        android:name="com.example.chicko.ui.ProvidersFragment"
         android:label="@string/title_providers"
         tools:layout="@layout/fragment_providers" />
 

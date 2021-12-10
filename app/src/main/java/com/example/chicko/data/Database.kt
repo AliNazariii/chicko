@@ -13,7 +13,14 @@ class Database {
         val Categories = mutableListOf<Category>(
             Category(1, "عمومی"),
             Category(2, "تفریحی"),
-            Category(3, "تغذیه"),
+            Category(3, "مواد غذایی"),
+            Category(4, "خدماتی"),
+            Category(5, "تعمیرات"),
+            Category(6, "تزئینات"),
+            Category(7, "نظافت"),
+            Category(8, "کافه و رستوران"),
+            Category(9, "آموزشی"),
+            Category(10, "پزشکی"),
         )
 
         val Services = mutableListOf<Service>(
