@@ -43,12 +43,11 @@ class Database {
         )
 
         val Comments = mutableListOf<Comment>(
-            Comment("havig", 1, "test"),
-            Comment("havig", 2, "test"),
-            Comment("havig", 3, "test"),
-            Comment("havig", 4, "test"),
-            Comment("havig", 5, "test"),
-            Comment("havig", 6, "test"),
+            Comment("کاربر تستی", 6, "خیلی خوب بود"),
+            Comment("رضا", 6, "اصلا راضی نبودم"),
+            Comment("علی", 6, "حتما پیشنهاد میکنم!!"),
+            Comment("عباس", 6, "عالیه"),
+            Comment("کاربر تستی 2", 6, "بد نیست"),
         )
     }
 }

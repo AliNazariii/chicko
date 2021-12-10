@@ -1,14 +1,23 @@
 package com.example.chicko.activities
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.chicko.R
 import com.example.chicko.data.ProvidersDataSource
 import com.example.chicko.databinding.ActivityServiceBinding
 import com.example.chicko.utils.withPersianDigits
+import com.example.chicko.model.Service
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
+import android.widget.ImageView
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.chicko.adapter.CategoriesAdapter
+import com.example.chicko.adapter.CommentsAdapter
+import com.example.chicko.data.CategoriesDataSource
+import com.example.chicko.data.CommentsDataSource
 
 fun fillStar(star: ImageView) {
     star.setImageResource(R.drawable.ic_baseline_star_pink_24)
@@ -26,6 +35,8 @@ fun fillAllStars(stars: List<ImageView>, serviceId: Int, username: String) {
 
 class ServiceActivity : AppCompatActivity() {
     private lateinit var binding: ActivityServiceBinding
+    private lateinit var recyclerView: RecyclerView
+
 
     companion object {
         const val SERVICE_ID = "service_id"
@@ -88,6 +99,16 @@ class ServiceActivity : AppCompatActivity() {
                 fillAllStars(stars, service.ID, username)
             }
         }
+        recyclerView = binding.commentsRecyclerview
+        val dataSet = CommentsDataSource().loadComments(service.ID)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = CommentsAdapter(this, dataSet)
+
+        val dividerItemDecoration = DividerItemDecoration(
+            recyclerView.context,
+            LinearLayoutManager.VERTICAL
+        )
+        recyclerView.addItemDecoration(dividerItemDecoration)
     }
 
 //    /**
