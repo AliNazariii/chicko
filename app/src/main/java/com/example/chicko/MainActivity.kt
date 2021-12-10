@@ -32,11 +32,4 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
-//    /**
-//     * Enables back button support. Simply navigates one element up on the stack.
-//     */
-//    override fun onSupportNavigateUp(): Boolean {
-//        return navController.navigateUp() || super.onSupportNavigateUp()
-//    }
 }
