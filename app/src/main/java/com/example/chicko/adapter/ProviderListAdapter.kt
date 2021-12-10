@@ -1,22 +1,16 @@
 package com.example.chicko.adapter
 
 import android.content.Context
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chicko.ProviderListFragmentDirections
 import com.example.chicko.R
-import com.example.chicko.model.ProviderItem
-import androidx.core.content.ContextCompat.startActivity
-
-import android.content.Intent
-import androidx.core.content.ContextCompat
 import com.example.chicko.ServiceActivity
+import com.example.chicko.model.ProviderItem
 
 
 class ProviderListAdapter(

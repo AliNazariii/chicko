@@ -19,15 +19,15 @@ class ProviderItemsDataSource {
     }
 
     fun addComment(ownerName: String, serviceID: Int, content: String) {
-        Database.COMMENTS.add(Comment(ownerName, serviceID, content))
+        Database.Comments.add(Comment(ownerName, serviceID, content))
     }
 
     fun getCommentsByServiceID(serviceID: Int): List<Comment> {
-        return Database.COMMENTS.filter { comment -> comment.serviceID == serviceID }
+        return Database.Comments.filter { comment -> comment.serviceID == serviceID }
     }
 
     fun getAllCategories(): List<Category> {
-        return Database.CATEGORIES
+        return Database.Categories
     }
 
     fun addScore(value: Int, userName: String, serviceID: Int) {
