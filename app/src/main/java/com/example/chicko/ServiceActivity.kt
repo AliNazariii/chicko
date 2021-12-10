@@ -37,5 +37,20 @@ class ServiceActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + service.phone))
             startActivity(intent)
         }
+
+        binding.share.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                val url = "http://chicko.ir/services/${service.ID}\n"
+                val name = service.name + "\n"
+                val address = "آدرس: ${service.address}" + "\n"
+                val phone = "شماره تلفن: ${service.phone}" + "\n"
+                putExtra(Intent.EXTRA_TEXT, url + address + phone)
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
     }
 }
