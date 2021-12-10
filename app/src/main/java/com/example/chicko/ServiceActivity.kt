@@ -44,6 +44,7 @@ class ServiceActivity : AppCompatActivity() {
         // action bar title
         title = service.name
 
+        binding.banner.setImageResource(service.banner)
         binding.title.text = service.name
         binding.addressTextview.text = service.address
         binding.phoneTextview.text = service.phone.withPersianDigits

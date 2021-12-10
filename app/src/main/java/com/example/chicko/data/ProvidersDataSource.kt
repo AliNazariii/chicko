@@ -1,8 +1,6 @@
 package com.example.chicko.data
 
 import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
-import com.example.chicko.R
 import com.example.chicko.model.Category
 import com.example.chicko.model.Comment
 import com.example.chicko.model.Score
@@ -43,7 +41,8 @@ class ProvidersDataSource {
         fun addOrEditScore(value: Int, userName: String, serviceID: Int) {
             // apply score to the service scores
             val score = Score(userName, serviceID, value)
-            val existed = Database.Scores.find { it.ServiceID == serviceID && it.userName == userName }
+            val existed =
+                Database.Scores.find { it.ServiceID == serviceID && it.userName == userName }
             if (existed != null) {
                 Database.Scores[Database.Scores.indexOf(existed)] = score
             }
@@ -52,6 +51,9 @@ class ProvidersDataSource {
 
         fun getAverageScore(serviceID: Int): Float {
             val list = Database.Scores.filter { it.ServiceID == serviceID }
+            if (list.isEmpty()) {
+                return 0.0.toFloat()
+            }
             val sum = list.sumOf { it.value }.toFloat()
             return sum / list.size
         }
@@ -63,14 +65,13 @@ class ProvidersDataSource {
         fun getMyScoreToService(serviceID: Int, myUsername: String): Int {
             val filtered =
                 Database.Scores.filter { it.ServiceID == serviceID && it.userName == myUsername }
-            if (filtered.size > 0) {
-                return filtered[0].value
-            } else return 0
+            return if (filtered.isNotEmpty()) {
+                filtered[0].value
+            } else 0
         }
 
-        //TODO
         fun getTotalCommentCount(serviceID: Int): Int {
-            return 123
+            return Database.Comments.filter { it.serviceID == serviceID }.size
         }
     }
 

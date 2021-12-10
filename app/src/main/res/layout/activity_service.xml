@@ -1,218 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ServiceActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceActivity">
 
     <ImageView
-            android:id="@+id/banner"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:contentDescription="TODO"
-            android:foreground="@drawable/image_overlay"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/banner_provider1" />
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="TODO"
+        android:foreground="@drawable/image_overlay"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/banner_pipe" />
 
     <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/banner"
-            app:layout_constraintEnd_toEndOf="@+id/banner"
-            app:layout_constraintHorizontal_bias="0.916"
-            app:layout_constraintStart_toStartOf="@+id/banner"
-            app:layout_constraintTop_toTopOf="@+id/banner"
-            app:layout_constraintVertical_bias="0.795"
-            tools:text="فلان چیز فروشی یارو" />
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="@+id/banner"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="@+id/banner"
+        app:layout_constraintTop_toTopOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.795"
+        tools:text="فلان چیز فروشی یارو" />
 
     <TextView
-            android:id="@+id/scoreTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:background="@color/pink_500"
-            android:drawablePadding="10dp"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:drawableStartCompat="@drawable/ic_baseline_star_white_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/banner"
-            tools:text="4.5 / 5">
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/pink_500"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:drawableStartCompat="@drawable/ic_baseline_star_white_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        tools:text="4.5 / 5">
 
     </TextView>
 
     <TextView
-            android:id="@+id/infoTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/gray_500"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/scoreTextView"
-            app:layout_constraintEnd_toStartOf="@+id/scoreTextView"
-            app:layout_constraintTop_toTopOf="@+id/scoreTextView"
-            tools:text="123 رای | 11 نظر" />
+        android:id="@+id/infoTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/gray_500"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scoreTextView"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreTextView"
+        tools:text="123 رای | 11 نظر" />
 
     <ImageView
-            android:id="@+id/share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="29dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/banner"
-            app:srcCompat="@drawable/ic_baseline_share_24" />
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <TextView
-            android:id="@+id/phoneTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="10dp"
-            android:drawablePadding="5dp"
-            android:textColor="@color/gray_700"
-            android:textSize="20sp"
-            app:drawableEndCompat="@drawable/ic_baseline_local_phone_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scoreTextView"
-            tools:text="4456246843" />
+        android:id="@+id/phoneTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/gray_700"
+        android:textSize="20sp"
+        app:drawableEndCompat="@drawable/ic_baseline_local_phone_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView"
+        tools:text="4456246843" />
 
 
     <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/gray_200"
-            app:layout_constraintTop_toBottomOf="@+id/phoneTextview" />
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_200"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextview" />
 
     <TextView
-            android:id="@+id/addressTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:drawablePadding="5dp"
-            android:textColor="@color/gray_700"
-            android:textSize="20sp"
-            app:drawableEndCompat="@drawable/ic_baseline_location_on_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneTextview"
-            tools:text="4456246843" />
+        android:id="@+id/addressTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/gray_700"
+        android:textSize="20sp"
+        app:drawableEndCompat="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextview"
+        tools:text="4456246843" />
 
     <TextView
-            android:id="@+id/rateTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:textColor="@color/gray_500"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addressTextview"
-            android:text="@string/rate"
-            tools:text="امتیاز دهید" />
+        android:id="@+id/rateTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rate"
+        android:textColor="@color/gray_500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextview"
+        tools:text="امتیاز دهید" />
 
     <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="48dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rateTextview">
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rateTextview">
 
         <ImageView
-                android:id="@+id/star1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_baseline_star_border_24" />
+            android:id="@+id/star1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
 
         <Space
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"></Space>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></Space>
 
         <ImageView
-                android:id="@+id/star2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_baseline_star_border_24" />
+            android:id="@+id/star2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
 
         <Space
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"></Space>
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></Space>
 
         <ImageView
 
-                android:id="@+id/star3"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_baseline_star_border_24" />
+            android:id="@+id/star3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
 
         <Space
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"></Space>
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></Space>
 
         <ImageView
-                android:id="@+id/star4"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_baseline_star_border_24" />
+            android:id="@+id/star4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
 
         <Space
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"></Space>
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></Space>
 
         <ImageView
-                android:id="@+id/star5"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_baseline_star_border_24" />
+            android:id="@+id/star5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
     </LinearLayout>
 
     <TextView
-            android:id="@+id/commentsTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/gray_500"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:text="امتیاز دهید" />
+        android:id="@+id/commentsTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/gray_500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:text="امتیاز دهید" />
 
     <Button
-            android:text="@string/phone_call"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/callBtn"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/pink_500"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/phoneTextview"
-            app:layout_constraintBottom_toBottomOf="@+id/phoneTextview"
-            app:strokeWidth="3dp"
-            app:strokeColor="@color/pink_500"
-            app:backgroundTint="@color/white" />
+        android:id="@+id/callBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/phone_call"
+        android:textColor="@color/pink_500"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneTextview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phoneTextview"
+        app:strokeColor="@color/pink_500"
+        app:strokeWidth="3dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
