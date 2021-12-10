@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.chicko.databinding.ActivityMainBinding
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -26,48 +30,46 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         // Make sure actions in the ActionBar get propagated to the NavController
-        setupActionBarWithNavController(navController)
+//        setupActionBarWithNavController(navController)
+
+
+        val bottomNavigationView: BottomNavigationView = binding.bottomNavigation
+
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+//            )
+//        )
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+        bottomNavigationView.setupWithNavController(navController)
 
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_menu -> {
                     val fragment = HomeFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
                         .commit()
                     true
                 }
                 R.id.providers_menu -> {
                     val fragment = ProviderListFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
                         .commit()
                     true
                 }
                 R.id.account_menu -> {
-                    val fragment = ServiceFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment, fragment.javaClass.simpleName)
-                        .commit()
+                    val intent = Intent(this, ServiceActivity::class.java)
+                    startActivity(intent)
                     true
                 }
             }
             false
         }
 
-
-//        binding.bottomNavigation.setOnItemSelectedListener { item ->
-//            when (item.itemId) {
-//                R.id.page_3 -> {
-////                    binding.bottomNavigation.selectedItemId = item.itemId
-//
-//                    // Create an intent with a destination of ProvidersActivity
-//                    val intent = Intent(this, ProvidersActivity::class.java)
-//
-//                    // Start an activity using the data and destination from the Intent.
-//                    startActivity(intent)
-//                    true
-//                }
-//                else -> false
-//            }
-//        }
     }
 
     /**

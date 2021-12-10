@@ -12,6 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chicko.ProviderListFragmentDirections
 import com.example.chicko.R
 import com.example.chicko.model.ProviderItem
+import androidx.core.content.ContextCompat.startActivity
+
+import android.content.Intent
+import androidx.core.content.ContextCompat
+import com.example.chicko.ServiceActivity
+
 
 class ProviderListAdapter(
     private val context: Context,
@@ -50,10 +56,8 @@ class ProviderListAdapter(
         holder.view.setOnClickListener {
             // Create an action from WordList to DetailList
             // using the required arguments
-            val action =
-                ProviderListFragmentDirections.actionProviderListFragmentToServiceFragment2(id = 2)
-            // Navigate using that action
-//            holder.view.findNavController().navigate(action)
+            val intent = Intent(context, ServiceActivity::class.java)
+            context.startActivity(intent)
         }
     }
 
