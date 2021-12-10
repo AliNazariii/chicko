@@ -40,9 +40,14 @@ class ProvidersDataSource {
             return Database.Categories
         }
 
-        fun addScore(value: Int, userName: String, serviceID: Int) {
+        fun addOrEditScore(value: Int, userName: String, serviceID: Int) {
             // apply score to the service scores
-            Database.Scores.add(Score(userName, serviceID, value))
+            val score = Score(userName, serviceID, value)
+            val existed = Database.Scores.find { it.ServiceID == serviceID && it.userName == userName }
+            if (existed != null) {
+                Database.Scores[Database.Scores.indexOf(existed)] = score
+            }
+            Database.Scores.add(score)
         }
 
         fun getAverageScore(serviceID: Int): Float {
@@ -51,11 +56,20 @@ class ProvidersDataSource {
             return sum / list.size
         }
 
-        fun getTotalScoreCount(serviceID: Int) : Int {
+        fun getTotalScoreCount(serviceID: Int): Int {
             return Database.Scores.filter { it.ServiceID == serviceID }.size
         }
+
+        fun getMyScoreToService(serviceID: Int, myUsername: String): Int {
+            val filtered =
+                Database.Scores.filter { it.ServiceID == serviceID && it.userName == myUsername }
+            if (filtered.size > 0) {
+                return filtered[0].value
+            } else return 0
+        }
+
         //TODO
-        fun getTotalCommentCount(serviceID: Int) : Int {
+        fun getTotalCommentCount(serviceID: Int): Int {
             return 123
         }
     }
