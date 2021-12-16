@@ -18,6 +18,7 @@ import com.example.chicko.adapter.CategoriesAdapter
 import com.example.chicko.adapter.CommentsAdapter
 import com.example.chicko.data.CategoriesDataSource
 import com.example.chicko.data.CommentsDataSource
+import com.example.chicko.ui.CommentDialogFragment
 
 fun fillStar(star: ImageView) {
     star.setImageResource(R.drawable.ic_baseline_star_pink_24)
@@ -69,6 +70,10 @@ class ServiceActivity : AppCompatActivity() {
         binding.callBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + service.phone))
             startActivity(intent)
+        }
+
+        binding.commentBtn.setOnClickListener {
+            CommentDialogFragment().show(supportFragmentManager, "Comment Fragment")
         }
 
         binding.share.setOnClickListener {
