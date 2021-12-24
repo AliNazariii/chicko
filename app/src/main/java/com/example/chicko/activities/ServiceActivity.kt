@@ -73,7 +73,11 @@ class ServiceActivity : AppCompatActivity() {
         }
 
         binding.commentBtn.setOnClickListener {
-            CommentDialogFragment().show(supportFragmentManager, "Comment Fragment")
+            val mBundle = Bundle()
+            mBundle.putInt("service_id", service.ID)
+            val cFragment = CommentDialogFragment()
+            cFragment.arguments = mBundle
+            cFragment.show(supportFragmentManager, "Comment Fragment")
         }
 
         binding.share.setOnClickListener {
