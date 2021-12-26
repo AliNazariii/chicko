@@ -28,8 +28,9 @@ class CommentDialogFragment : DialogFragment() {
             comment = view.findViewById<EditText>(R.id.add_comment_input).text.toString()
             ProvidersDataSource.addComment("shalgham", bundle!!.getInt("service_id"), comment)
             Log.w("Comment", comment)
-            activity?.onBackPressed();
-//            getFragmentManager()?.popBackStack();
+//            activity?.onBackPressed();
+            this.dismiss()
+//            fragmentManager?.popBackStack();
         }
         return view
 
