@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/layout"
-        android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
     android:layout_height="60dp">
 
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/usernameTextview"
-            android:textSize="14sp"
-            android:textColor="@color/gray_500"
-            tools:text="فلانی"
-            android:gravity="start" />
+        android:id="@+id/usernameTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/gray_500"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        tools:text="فلانی" />
 
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/contentTextview"
-            android:textSize="16sp"
-            android:textColor="@color/gray_700"
-            android:layout_below="@+id/usernameTextview"
-            tools:text="عالیه و بی نظیر"
-            android:gravity="start" />
+        android:id="@+id/contentTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameTextview"
+        android:gravity="start"
+        android:textColor="@color/gray_700"
+        android:textSize="16sp"
+        tools:text="عالیه و بی نظیر" />
 </RelativeLayout>

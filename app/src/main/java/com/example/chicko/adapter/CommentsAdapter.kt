@@ -40,16 +40,9 @@ class CommentsAdapter(
      */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        holder.usernameTextview.text = item.userName
+//        holder.usernameTextview.text = item.userName
+        holder.usernameTextview.text = "کاربر ناشناس"
         holder.contentTextview.text = item.content
-
-        // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
-//        holder.view.setOnClickListener {
-//            // Create an action from WordList to DetailList
-//            // using the required arguments
-//            val intent = Intent(context, ServiceActivity::class.java)
-//            context.startActivity(intent)
-//        }
     }
 
     /**

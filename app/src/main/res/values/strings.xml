@@ -14,8 +14,9 @@
     <string name="title_account">حساب کاربری</string>
     <string name="phone_call">تماس تلفنی</string>
     <string name="comments">نظرات</string>
-    <string name="add_comment">نظر جدید</string>
-    <string name="add_comment_hint">نظر خود را وارد نمایید.</string>
+    <string name="new_comment">نظر جدید</string>
+    <string name="add_comment">ثبت نظر</string>
+    <string name="add_comment_hint">نظر خود را وارد نمایید...</string>
 
 
 </resources>

@@ -1,22 +1,20 @@
 package com.example.chicko.activities
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.chicko.R
-import com.example.chicko.data.ProvidersDataSource
-import com.example.chicko.databinding.ActivityServiceBinding
-import com.example.chicko.utils.withPersianDigits
-import com.example.chicko.model.Service
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
+import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chicko.R
 import com.example.chicko.adapter.CommentsAdapter
 import com.example.chicko.data.CommentsDataSource
+import com.example.chicko.data.ProvidersDataSource
+import com.example.chicko.databinding.ActivityServiceBinding
 import com.example.chicko.ui.CommentDialogFragment
+import com.example.chicko.utils.withPersianDigits
 
 fun fillStar(star: ImageView) {
     star.setImageResource(R.drawable.ic_baseline_star_pink_24)
@@ -60,10 +58,7 @@ class ServiceActivity : AppCompatActivity() {
 
         showAverageScore()
 
-        binding.infoTextview.text =
-            "${ProvidersDataSource.getTotalScoreCount(service.ID).withPersianDigits} رای | ${
-                ProvidersDataSource.getTotalCommentCount(service.ID).withPersianDigits
-            } نظر"
+        showScoreCommentSummary()
 
         binding.callBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + service.phone))
@@ -106,6 +101,7 @@ class ServiceActivity : AppCompatActivity() {
                 ProvidersDataSource.addOrEditScore(index + 1, username, service.ID)
                 fillAllStars(stars, service.ID, username)
                 showAverageScore()
+                showScoreCommentSummary()
             }
         }
 
@@ -115,7 +111,7 @@ class ServiceActivity : AppCompatActivity() {
     fun loadComments() {
         val id = intent?.extras?.getInt(SERVICE_ID)!!
         recyclerView = binding.commentsRecyclerview
-        val dataSet = CommentsDataSource().loadComments(id)
+        val dataSet = CommentsDataSource().loadComments(id).reversed()
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CommentsAdapter(this, dataSet)
 
@@ -130,6 +126,14 @@ class ServiceActivity : AppCompatActivity() {
         val id = intent?.extras?.getInt(SERVICE_ID)!!
         val averageScore = ProvidersDataSource.getAverageScore(id)
         binding.scoreTextView.text = "${averageScore.withPersianDigits} / ۵"
+    }
+
+    fun showScoreCommentSummary() {
+        val id = intent?.extras?.getInt(SERVICE_ID)!!
+        binding.infoTextview.text =
+            "${ProvidersDataSource.getTotalScoreCount(id).withPersianDigits} رای | ${
+                ProvidersDataSource.getTotalCommentCount(id).withPersianDigits
+            } نظر"
     }
 
 //    /**
