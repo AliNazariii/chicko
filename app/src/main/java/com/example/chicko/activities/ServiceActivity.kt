@@ -59,12 +59,15 @@ class ServiceActivity : AppCompatActivity() {
         binding.title.text = service.name
         binding.addressTextview.text = service.address
         binding.phoneTextview.text = service.phone.withPersianDigits
+
         val averageScore = ProvidersDataSource.getAverageScore(service.ID)
         binding.scoreTextView.text = "${averageScore.withPersianDigits} / ۵"
+
         binding.infoTextview.text =
             "${ProvidersDataSource.getTotalScoreCount(service.ID).withPersianDigits} رای | ${
                 ProvidersDataSource.getTotalCommentCount(service.ID).withPersianDigits
             } نظر"
+
         binding.callBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + service.phone))
             startActivity(intent)
@@ -92,6 +95,7 @@ class ServiceActivity : AppCompatActivity() {
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
         }
+
         val stars = listOf<ImageView>(
             binding.star1,
             binding.star2,

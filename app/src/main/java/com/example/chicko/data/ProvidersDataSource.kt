@@ -5,6 +5,8 @@ import com.example.chicko.model.Category
 import com.example.chicko.model.Comment
 import com.example.chicko.model.Score
 import com.example.chicko.model.Service
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class ProvidersDataSource {
 
@@ -55,7 +57,10 @@ class ProvidersDataSource {
                 return 0.0.toFloat()
             }
             val sum = list.sumOf { it.value }.toFloat()
-            return sum / list.size
+
+            val df = DecimalFormat("#.##")
+            df.roundingMode = RoundingMode.CEILING
+            return df.format(sum / list.size).toFloat()
         }
 
         fun getTotalScoreCount(serviceID: Int): Int {
