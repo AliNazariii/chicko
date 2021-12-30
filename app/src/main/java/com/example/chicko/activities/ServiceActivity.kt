@@ -14,9 +14,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chicko.adapter.CategoriesAdapter
 import com.example.chicko.adapter.CommentsAdapter
-import com.example.chicko.data.CategoriesDataSource
 import com.example.chicko.data.CommentsDataSource
 import com.example.chicko.ui.CommentDialogFragment
 
@@ -72,12 +70,12 @@ class ServiceActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val commentBundle = Bundle()
+        commentBundle.putInt("service_id", id)
+        val commentDialogFragment = CommentDialogFragment()
+        commentDialogFragment.arguments = commentBundle
         binding.commentBtn.setOnClickListener {
-            val mBundle = Bundle()
-            mBundle.putInt("service_id", service.ID)
-            val cFragment = CommentDialogFragment()
-            cFragment.arguments = mBundle
-            cFragment.show(supportFragmentManager, "Comment Fragment")
+            commentDialogFragment.show(supportFragmentManager, "Comment Fragment")
         }
 
         binding.share.setOnClickListener {
@@ -108,8 +106,14 @@ class ServiceActivity : AppCompatActivity() {
                 fillAllStars(stars, service.ID, username)
             }
         }
+
+        loadComments()
+    }
+
+    fun loadComments() {
+        val id = intent?.extras?.getInt(SERVICE_ID)!!
         recyclerView = binding.commentsRecyclerview
-        val dataSet = CommentsDataSource().loadComments(service.ID)
+        val dataSet = CommentsDataSource().loadComments(id)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CommentsAdapter(this, dataSet)
 
