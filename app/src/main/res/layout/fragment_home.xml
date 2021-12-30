@@ -19,21 +19,28 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             app:srcCompat="@drawable/logo" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/title_description">
-
-            <com.google.android.material.textfield.TextInputEditText
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/searchListView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:layout_below="@+id/searchView"
+                android:divider="@color/gray_200"
+                android:dividerHeight="2dp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:iconifiedByDefault="false"
+                android:queryHint="@string/search_hint" />
+        </RelativeLayout>
 
     </LinearLayout>
 

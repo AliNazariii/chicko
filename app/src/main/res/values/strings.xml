@@ -1,12 +1,7 @@
 <resources>
     <string name="app_name">chicko</string>
-    <string name="title_description">چیکار می‌خوای بکنی؟</string>
-
-    <string name="title_provider1">لوله کشی آقا بزرگ</string>
-    <string name="title_provider2">نانوانی شاطر عباس</string>
-    <string name="title_provider3">میوه‌فروشی سید</string>
-    <string name="title_provider4">تعمیرات لپ‌تاپ منچستر</string>
-    <string name="title_provider5">نظافت ساختمان با دانا</string>
+    <string name="search_hint">چیکار می‌خوای بکنی؟</string>
+    <string name="no_match">خدمت مشابهی یافت نشد!</string>
 
     <!--    service page strings-->
     <string name="rate">امتیاز دهید</string>
