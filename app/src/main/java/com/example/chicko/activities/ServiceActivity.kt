@@ -43,6 +43,7 @@ class ServiceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
 
         val username = "shalgham"
 
@@ -52,16 +53,12 @@ class ServiceActivity : AppCompatActivity() {
         val id = intent?.extras?.getInt(SERVICE_ID)
         val service = ProvidersDataSource.getServiceById(id!!)!!
 
-        // action bar title
-        title = service.name
-
         binding.banner.setImageResource(service.banner)
         binding.title.text = service.name
         binding.addressTextview.text = service.address
         binding.phoneTextview.text = service.phone.withPersianDigits
 
-        val averageScore = ProvidersDataSource.getAverageScore(service.ID)
-        binding.scoreTextView.text = "${averageScore.withPersianDigits} / ۵"
+        showAverageScore()
 
         binding.infoTextview.text =
             "${ProvidersDataSource.getTotalScoreCount(service.ID).withPersianDigits} رای | ${
@@ -108,6 +105,7 @@ class ServiceActivity : AppCompatActivity() {
             imageView.setOnClickListener {
                 ProvidersDataSource.addOrEditScore(index + 1, username, service.ID)
                 fillAllStars(stars, service.ID, username)
+                showAverageScore()
             }
         }
 
@@ -126,6 +124,12 @@ class ServiceActivity : AppCompatActivity() {
             LinearLayoutManager.VERTICAL
         )
         recyclerView.addItemDecoration(dividerItemDecoration)
+    }
+
+    private fun showAverageScore() {
+        val id = intent?.extras?.getInt(SERVICE_ID)!!
+        val averageScore = ProvidersDataSource.getAverageScore(id)
+        binding.scoreTextView.text = "${averageScore.withPersianDigits} / ۵"
     }
 
 //    /**

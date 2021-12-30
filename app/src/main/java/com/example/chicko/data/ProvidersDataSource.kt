@@ -47,8 +47,9 @@ class ProvidersDataSource {
                 Database.Scores.find { it.ServiceID == serviceID && it.userName == userName }
             if (existed != null) {
                 Database.Scores[Database.Scores.indexOf(existed)] = score
+            } else {
+                Database.Scores.add(score)
             }
-            Database.Scores.add(score)
         }
 
         fun getAverageScore(serviceID: Int): Float {
