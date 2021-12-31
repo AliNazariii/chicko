@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout"
-    android:layout_width="match_parent"
-    android:layout_height="60dp">
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
 
     <TextView
-        android:id="@+id/usernameTextview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:textColor="@color/gray_500"
-        android:textSize="14sp"
-        android:layout_marginTop="5dp"
-        tools:text="فلانی" />
+            android:id="@+id/usernameTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_500"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:textAlignment="textStart"
+            android:textDirection="rtl"
+            tools:text="فلانی" />
 
     <TextView
-        android:id="@+id/contentTextview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usernameTextview"
-        android:gravity="start"
-        android:textColor="@color/gray_700"
-        android:textSize="16sp"
-        tools:text="عالیه و بی نظیر" />
+            android:id="@+id/contentTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usernameTextview"
+            android:textColor="@color/gray_700"
+            android:textAlignment="textStart"
+            android:textDirection="rtl"
+            android:textSize="16sp"
+            tools:text="عالیه و بی نظیر" />
 </RelativeLayout>

@@ -17,6 +17,20 @@
     <string name="new_comment">نظر جدید</string>
     <string name="add_comment">ثبت نظر</string>
     <string name="add_comment_hint">نظر خود را وارد نمایید...</string>
+    <string name="add_service">ثبت سرویس‌دهنده</string>
+    <string name="service_name">اسم</string>
+    <string name="address">آدرس</string>
+    <string name="call_number">شماره تماس</string>
+    <string name="add">ثبت</string>
+    <string name="title_activity_add_service">AddServiceActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
 </resources>

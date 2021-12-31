@@ -15,4 +15,13 @@
         <item name="android:fontFamily">@font/dana_font</item>
         <item name="fontFamily">@font/dana_font</item>
     </style>
+
+    <style name="Theme.Chicko.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Chicko.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Chicko.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

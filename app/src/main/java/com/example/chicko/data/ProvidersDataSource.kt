@@ -1,6 +1,7 @@
 package com.example.chicko.data
 
 import androidx.annotation.DrawableRes
+import com.example.chicko.R
 import com.example.chicko.model.Category
 import com.example.chicko.model.Comment
 import com.example.chicko.model.Score
@@ -86,6 +87,11 @@ class ProvidersDataSource {
 
         fun loadProviderItems(): List<ProviderData> {
             return Database.Services.map { ProviderData(it.ID, it.name, it.categoryID, it.banner) }
+        }
+
+        fun addProvider(categoryId: Int, name: String, address: String, phone: String) {
+            Database.Services.add(Service(Database.Services.size + 1,categoryId,name,address,phone,0.0,
+                R.drawable.banner_cafe))
         }
     }
 }

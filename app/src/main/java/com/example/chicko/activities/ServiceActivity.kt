@@ -125,7 +125,8 @@ class ServiceActivity : AppCompatActivity() {
     private fun showAverageScore() {
         val id = intent?.extras?.getInt(SERVICE_ID)!!
         val averageScore = ProvidersDataSource.getAverageScore(id)
-        binding.scoreTextView.text = "${averageScore.withPersianDigits} / ۵"
+        val averageString = String.format("%.1f", averageScore)
+        binding.scoreTextView.text = "${averageString.withPersianDigits} / ۵"
     }
 
     fun showScoreCommentSummary() {

@@ -8,7 +8,7 @@ class Database {
         val Users = mutableListOf<User>(
             User(firstName = "Muhammad", lastName = "Azhdari", userName = "havig", "12345"),
             User(firstName = "Ali", lastName = "Nazari", userName = "shalgham", "67890"),
-            User(firstName = "Yashar", lastName = "Jahanshahlou", userName = "piaz", "13579"),
+            User(firstName = "Yashar", lastName = "Jahanshahloo", userName = "piaz", "13579"),
         )
 
         val Categories = mutableListOf<Category>(
