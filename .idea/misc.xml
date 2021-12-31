@@ -5,40 +5,45 @@
       <map>
         <entry key="..\:/Android/chicko/app/src/main/res/font/dana_font.xml" value="0.28958333333333336" />
         <entry key="..\:/Android/chicko/app/src/main/res/font/yekan_font.xml" value="0.28958333333333336" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout-v21/fragment_home.xml" value="0.13385416666666666" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_add_service.xml" value="0.5" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_category_providers.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_home.xml" value="0.2028985507246377" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_main.xml" value="0.36" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_main2.xml" value="0.11979166666666667" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_main_old.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_providers.xml" value="0.259375" />
-        <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_service.xml" value="0.13333333333333333" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/activity_service.xml" value="0.3" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/add_comment_dialog.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/bottom_navigation_menu.xml" value="0.17300724637681159" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/category_item.xml" value="0.2" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/comment_item.xml" value="0.13385416666666666" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/content_add_service.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_categories.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_dashboard.xml" value="0.13385416666666666" />
-        <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_home.xml" value="0.3" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_first.xml" value="0.22056159420289856" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_home.xml" value="0.44000000000000006" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_item_list.xml" value="0.2453125" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_notifications.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_provider_list.xml" value="0.2536231884057971" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_providers.xml" value="0.13385416666666666" />
+        <entry key="..\:/Android/chicko/app/src/main/res/layout/fragment_second.xml" value="0.22056159420289856" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/provider_item.xml" value="0.24954710144927536" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/provider_items_list.xml" value="0.17300724637681159" />
         <entry key="..\:/Android/chicko/app/src/main/res/layout/service_page_layout.xml" value="0.24954710144927536" />
         <entry key="..\:/Android/chicko/app/src/main/res/menu/bottom_nav_menu.xml" value="0.13385416666666666" />
         <entry key="..\:/Android/chicko/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2453125" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.11041666666666666" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/layout/activity_add_service.xml" value="0.264" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/layout/activity_add_service2.xml" value="0.1125" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/android_projects/chicko/app/src/main/res/layout/activity_service.xml" value="0.264" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/layout/category_dropdown_item.xml" value="0.1203125" />
         <entry key="..\:/android_projects/chicko/app/src/main/res/layout/comment_item.xml" value="0.264" />
         <entry key="..\:/android_projects/chicko/app/src/main/res/layout/fragment_categories.xml" value="0.24322916666666666" />
-        <entry key="..\:/android_projects/chicko/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="app/src/main/res/drawable/round_koner.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_service.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/add_commend_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/provider_item.xml" value="0.151268115942029" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

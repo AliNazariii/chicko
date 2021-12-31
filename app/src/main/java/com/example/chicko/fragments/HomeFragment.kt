@@ -1,4 +1,4 @@
-package com.example.chicko.ui
+package com.example.chicko.fragments
 
 import android.R
 import android.content.Intent
@@ -11,8 +11,7 @@ import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.chicko.AddServiceActivity
-import com.example.chicko.activities.CategoryProvidersActivity
+import com.example.chicko.activities.AddServiceActivity
 import com.example.chicko.activities.ServiceActivity
 import com.example.chicko.data.Database
 import com.example.chicko.databinding.FragmentHomeBinding

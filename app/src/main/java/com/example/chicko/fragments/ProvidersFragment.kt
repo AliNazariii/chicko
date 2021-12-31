@@ -1,4 +1,4 @@
-package com.example.chicko.ui
+package com.example.chicko.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

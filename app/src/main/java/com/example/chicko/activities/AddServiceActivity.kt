@@ -1,32 +1,22 @@
-package com.example.chicko
+package com.example.chicko.activities
 
-import android.app.Activity
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.chicko.databinding.ActivityAddServiceBinding
-import com.google.android.material.snackbar.Snackbar
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
+import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.ImageView
-
-import androidx.core.app.ActivityCompat.startActivityForResult
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.appcompat.app.AppCompatActivity
+import com.example.chicko.R
 import com.example.chicko.data.CategoriesDataSource
 import com.example.chicko.data.Database
 import com.example.chicko.data.ProvidersDataSource
+import com.example.chicko.databinding.ActivityAddServiceBinding
 
 
 class AddServiceActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityAddServiceBinding
     val SELECT_PICTURE = 110
     lateinit var avatar: ImageView
@@ -65,12 +55,6 @@ class AddServiceActivity : AppCompatActivity() {
             )
             finish()
         }
-
-
-//        val navController = findNavController(R.id.nav_host_fragment_content_add_service)
-//        appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-
     }
 
     fun imageChooser() {
@@ -104,9 +88,4 @@ class AddServiceActivity : AppCompatActivity() {
         }
 
     }
-//    override fun onSupportNavigateUp(): Boolean {
-//        val navController = findNavController(R.id.nav_host_fragment_content_add_service)
-//        return navController.navigateUp(appBarConfiguration)
-//                || super.onSupportNavigateUp()
-//    }
 }

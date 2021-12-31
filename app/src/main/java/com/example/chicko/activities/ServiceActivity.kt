@@ -13,7 +13,7 @@ import com.example.chicko.adapter.CommentsAdapter
 import com.example.chicko.data.CommentsDataSource
 import com.example.chicko.data.ProvidersDataSource
 import com.example.chicko.databinding.ActivityServiceBinding
-import com.example.chicko.ui.CommentDialogFragment
+import com.example.chicko.fragments.CommentDialogFragment
 import com.example.chicko.utils.withPersianDigits
 
 fun fillStar(star: ImageView) {

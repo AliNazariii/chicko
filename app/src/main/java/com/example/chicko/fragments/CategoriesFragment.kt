@@ -1,4 +1,4 @@
-package com.example.chicko.ui
+package com.example.chicko.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,10 +11,6 @@ import com.example.chicko.adapter.CategoriesAdapter
 import com.example.chicko.data.CategoriesDataSource
 import com.example.chicko.databinding.FragmentCategoriesBinding
 import androidx.recyclerview.widget.DividerItemDecoration
-
-import android.R.attr.divider
-
-
 
 
 class CategoriesFragment : Fragment() {

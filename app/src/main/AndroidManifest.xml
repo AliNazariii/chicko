@@ -12,7 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Chicko">
         <activity
-                android:name=".AddServiceActivity"
+                android:name=".activities.AddServiceActivity"
                 android:exported="false" />
         <activity
                 android:name=".activities.CategoryProvidersActivity"
