@@ -8,6 +8,9 @@ class CategoriesDataSource {
         fun getCategoryById(id: Int): Category? {
             return Database.Categories.find { it.ID == id }
         }
+        fun getCategoryByName(name: String): Category? {
+            return Database.Categories.find { it.name == name }
+        }
     }
 
     fun loadCategories(): List<CategoryData> {

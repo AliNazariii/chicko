@@ -13,9 +13,14 @@ import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 
 import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContentProviderCompat.requireContext
+import com.example.chicko.data.CategoriesDataSource
+import com.example.chicko.data.Database
 import com.example.chicko.data.ProvidersDataSource
 
 
@@ -46,14 +51,19 @@ class AddServiceActivity : AppCompatActivity() {
             imageChooser()
         }
 
+        val items = Database.Categories.map { it.name }
+        val adapter = ArrayAdapter(this, R.layout.category_dropdown_item, items)
+        (binding.menu.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+
         val addButton = binding.addButton
         addButton.setOnClickListener {
             ProvidersDataSource.addProvider(
-                1,
+                CategoriesDataSource.getCategoryByName(binding.menu.editText?.text.toString())!!.ID,
                 nameTextView.editText?.text.toString(),
                 addressTextView.editText?.text.toString(),
                 callNumberTextView.editText?.text.toString()
             )
+            finish()
         }
 
 
