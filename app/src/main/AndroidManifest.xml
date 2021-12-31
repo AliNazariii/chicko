@@ -13,9 +13,7 @@
             android:theme="@style/Theme.Chicko">
         <activity
                 android:name=".AddServiceActivity"
-                android:exported="false"
-                android:label="@string/title_activity_add_service"
-                android:theme="@style/Theme.Chicko.AppBarOverlay" />
+                android:exported="false" />
         <activity
                 android:name=".activities.CategoryProvidersActivity"
                 android:exported="false" />

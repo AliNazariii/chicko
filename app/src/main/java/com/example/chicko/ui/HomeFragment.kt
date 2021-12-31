@@ -11,6 +11,8 @@ import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.chicko.AddServiceActivity
+import com.example.chicko.activities.CategoryProvidersActivity
 import com.example.chicko.activities.ServiceActivity
 import com.example.chicko.data.Database
 import com.example.chicko.databinding.FragmentHomeBinding
@@ -41,6 +43,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val searchListView = binding.searchListView
         val searchView = binding.searchView
+        val fab = binding.fab
         val list = Database.Services.map { it.name }
 
         searchListView.setOnItemClickListener { parent, view, position, id ->
@@ -50,6 +53,11 @@ class HomeFragment : Fragment() {
                 Database.Services.find { it.name == (view as MaterialTextView).text.toString() }?.ID
             )
             view.context.startActivity(intent)
+        }
+
+        fab.setOnClickListener {
+            val intent = Intent(context, AddServiceActivity::class.java)
+            context?.startActivity(intent)
         }
 
         val adapter: ArrayAdapter<String> =
